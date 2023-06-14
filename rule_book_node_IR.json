@@ -1,0 +1,78 @@
+{
+    "loop_for":{
+        "arguments":["node.op1","node.relop","node.op2","graph.cond","graph.jump"],
+        "comment":"if {cond} {op1}{relop}{op2} continue else jump {jump}"
+
+
+    },
+    "loop_while":{
+        "arguments":["node.op1","node.relop","node.op2","graph.cond","graph.jump"],
+        "comment":"if {cond} {op1}{relop}{op2} continue else jump {jump}"
+
+    },
+    "loop_do_while":{
+        "arguments":[],
+        "comment":""
+        
+    },
+    "endloop_for":{
+        "arguments":["node.iter","graph.jump"],
+        "comment":"{iter}++;if not break jump to {jump}"
+
+    },
+    "endloop_while":{
+        "arguments":["graph.jump"],
+        "comment":"if not break jump to {jump}"
+    },
+    "endloop_do_while":{
+        "arguments":["node.op1","node.relop","node.op2","graph.cond","graph.jump"]
+    },
+    
+    
+    "end_if":{
+        "arguments":[],
+        "comment":""
+    },
+    "eval":{
+        "arguments":["node.store","node.op1","node.operand","node.op2"],
+        "comment":"{store}={op1}{operand}{op2}"
+    },
+    "copy" :{
+        "arguments":["node.write","node.read"],
+        "comment":"{write}={read}"
+    },
+    "branch":{
+        "arguments":["node.op1","node.relop","node.op2","graph.cond","graph.jump"],
+        "comment":"if {cond} {op1} {relop} {op2} continue else jump {jump}"
+    },
+    "init" :{
+        "arguments":["node.init","node.size"],
+        "comment":"initialise {init}"
+    },
+    "macros" :{
+        "arguments":["node.init","node.size","node.val"],
+        "comment":"macro define {init} as {val}"
+    },
+    "output":{
+        "arguments":["node.write","node.read"],
+        "comment":"write {write}"
+    },
+    "subflow":{
+        "arguments":["graph.call"],
+        "comment":"call {call}"
+    },
+    "delay":{
+        "arguments":[],
+        "comment":""
+    },
+    "input":{
+        "arguments":["node.var","node.type","node.port"],
+        "comment":"read {port}"
+    },
+    "end":{
+        "arguments":[],
+        "comment":"end"
+    }
+
+    
+}
